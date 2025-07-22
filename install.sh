@@ -7,7 +7,7 @@ mkdir -p $HOME/.config
 
 ln -sf ${PWD}/zsh/.zshrc ${HOME}
 
-#ln -sf ${PWD}/nvim ${HOME}/.config
+ln -sf ${PWD}/nvim ${HOME}/.config
 
 ln -sf ${PWD}/git ${HOME}/.config
 
