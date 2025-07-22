@@ -1,0 +1,43 @@
+[user]
+	name = Niklas Spielbauer
+	email = spielbauer@fzi.de
+	signingkey = /home/spielbau/.ssh/id_IDS_Ioniq
+[pull]
+	rebase = true
+[merge]
+	tool = nvimdiff
+	conflictstyle = diff3
+[mergetool "vimdiff"]
+	cmd = vimdiff $MERGED
+[diff]
+	tool = vimdiff
+	colorMoved = zebra
+[difftool "vimdiff"]
+	cmd = vimdiff --diff $LOCAL $REMOTE
+[core]
+	editor = vim
+	excludesfile = /home/spielbau/.gitignore
+[init]
+	defaultBranch = main
+[safe]
+	directory = /home/spielbau/sshfs/robot_folders_environments
+[mergetool]
+	prompt = false
+[fetch]
+	prune = true
+[push]
+	autoSetupRemote = true
+[commit]
+	verbose = true
+	gpgsign = true
+[alias]
+        mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
+[gpg]
+	format = ssh
+[rerere]
+	enabled = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+
