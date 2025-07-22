@@ -11,7 +11,7 @@ ln -sf ${PWD}/zsh/.zshrc ${HOME}
 
 ln -sf ${PWD}/git ${HOME}/.config
 
-#ln -sf ${PWD}/tmux/.tmux.conf ${HOME}
+ln -sf ${PWD}/tmux/.tmux.conf ${HOME}
 
 #ln -sf ${PWD}/shell/.bashrc ${HOME}
 #ln -sf ${PWD}/shell/.bash_profile ${HOME}
