@@ -15,12 +15,12 @@ ln -sf ${PWD}/tmux/.tmux.conf ${HOME}
 
 ln -sf ${PWD}/lazygit/config.yml ${HOME}/.config/lazygit
 
-#ln -sf ${PWD}/shell/.bashrc ${HOME}
-#ln -sf ${PWD}/shell/.bash_profile ${HOME}
-#ln -sf ${PWD}/shell/.profile ${HOME}
-#ln -sf ${PWD}/shell/.profile_plugins ${HOME}
-#ln -sf ${PWD}/shell/.shellrc ${HOME}
-#ln -sf ${PWD}/shell/.zprofile ${HOME}
+ln -sf ${PWD}/shell/.bashrc ${HOME}
+ln -sf ${PWD}/shell/.bash_profile ${HOME}
+ln -sf ${PWD}/shell/.profile ${HOME}
+ln -sf ${PWD}/shell/.profile_plugins ${HOME}
+ln -sf ${PWD}/shell/.shellrc ${HOME}
+ln -sf ${PWD}/shell/.zprofile ${HOME}
 
 #mkdir -p $HOME/.local/bin
 #ln -sf ${PWD}/scripts/* ${HOME}/.local/bin
