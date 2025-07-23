@@ -13,9 +13,6 @@ if [ -f /usr/local/bin/rob_folders_source.sh ]; then
   source /usr/local/bin/rob_folders_source.sh
 fi
 
-# robot_folders aliases
-alias ce="rob_folders change_environment"
-
 if command -v register-python-argcomplete &>/dev/null; then
   eval "$(register-python-argcomplete ros2)"
   eval "$(register-python-argcomplete colcon)"
