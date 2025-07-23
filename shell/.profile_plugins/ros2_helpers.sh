@@ -6,12 +6,15 @@ if [ ! -d "/opt/ros/humble" ] &&
   return 0
 fi
 
-if [ -f ${HOME}/.local/pipx/venvs/robot-folders/bin/rob_folders_source.sh ]; then
-  source ${HOME}/.local/pipx/venvs/robot-folders/bin/rob_folders_source.sh
+if [ -f ${HOME}/.local/bin/rob_folders_source.sh ]; then
+  source ${HOME}/.local/bin/rob_folders_source.sh
 fi
 if [ -f /usr/local/bin/rob_folders_source.sh ]; then
   source /usr/local/bin/rob_folders_source.sh
 fi
+
+# robot_folders aliases
+alias ce "rob_folders change_environment"
 
 if command -v register-python-argcomplete &>/dev/null; then
   eval "$(register-python-argcomplete ros2)"
