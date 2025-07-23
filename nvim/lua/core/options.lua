@@ -30,7 +30,9 @@ vim.opt.mouse = 'a'
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
---vim.o.clipboard = 'unnamedplus'
+vim.schedule(function()
+  vim.o.clipboard = 'unnamedplus'
+end)
 
 -- Enable break indent
 vim.o.breakindent = true
@@ -48,6 +50,16 @@ vim.wo.signcolumn = 'yes'
 -- Decrease update time
 vim.o.updatetime = 250
 vim.o.timeoutlen = 300
+
+-- Configure new splits
+vim.o.splitright = true
+vim.o.splitbelow = true
+
+-- Preview substitutions 
+vim.o.inccommand = 'split'
+
+-- Minimal number of screen lines to keep above and below the cursor.
+vim.o.scrolloff = 10
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
