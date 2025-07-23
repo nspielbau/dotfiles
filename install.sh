@@ -13,8 +13,10 @@ ln -sf ${PWD}/git ${HOME}/.config
 
 ln -sf ${PWD}/tmux/.tmux.conf ${HOME}
 
+mkdir -p $HOME/.config/lazygit
 ln -sf ${PWD}/lazygit/config.yml ${HOME}/.config/lazygit/config.yml
 
+mkdir -p $HOME/.config/robot_folders
 ln -sf ${PWD}/robot_folders/robot_folders.yaml ${HOME}/.config/robot_folders.yaml
 
 ln -sf ${PWD}/shell/.bashrc ${HOME}
