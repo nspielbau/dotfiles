@@ -2,8 +2,13 @@
 
 CONTAINER_USER="ubuntu"
 
-function fzirobdev() {
+function fzirobdevup() {
   devcontainer up --workspace-folder $HOME/setup_repos/devcontainer/$1 --dotfiles-repository=https://github.com/nspielbau/dotfiles.git --dotfiles-install-command=install.sh
+  devcontainer exec --workspace-folder $HOME/setup_repos/devcontainer/$1 zsh
+}
+
+function fzirobdevnew() {
+  devcontainer up --workspace-folder $HOME/setup_repos/devcontainer/$1 --dotfiles-repository=https://github.com/nspielbau/dotfiles.git --dotfiles-install-command=install.sh --remove-existing-container
   devcontainer exec --workspace-folder $HOME/setup_repos/devcontainer/$1 zsh
 }
 
