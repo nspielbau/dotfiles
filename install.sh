@@ -13,9 +13,9 @@ ln -sf ${PWD}/git ${HOME}/.config
 
 ln -sf ${PWD}/tmux/.tmux.conf ${HOME}
 
-ln -sf ${PWD}/lazygit/config.yml ${HOME}/.config/lazygit
+ln -sf ${PWD}/lazygit/config.yml ${HOME}/.config/lazygit/config.yml
 
-ln -sf ${PWD}/robot_folders/robot_folders.yaml ${HOME}/.config
+ln -sf ${PWD}/robot_folders/robot_folders.yaml ${HOME}/.config/robot_folders.yaml
 
 ln -sf ${PWD}/shell/.bashrc ${HOME}
 ln -sf ${PWD}/shell/.bash_profile ${HOME}
