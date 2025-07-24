@@ -6,7 +6,7 @@ return {
     { 'williamboman/mason.nvim', config = true },
   },
   config = function()
-    local mason_registry = require "custom.lsp.mason-registry"
+    local mason_registry = require "lsp.mason-registry"
 
     local lint = require("lint")
     -- CMake linters
