@@ -24,7 +24,7 @@
 # |  __/| |__| |_| | |_| || || |\  |___) |
 # |_|   |_____\___/ \____|___|_| \_|____/
 
-if [ ! -e ~/.fzf ]
+if [ ! -e ~/.fzf ]; then
   echo "Downloading initial setup of fzf"
   # We install without shell setup as we do this in our individual shells
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf 
