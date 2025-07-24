@@ -37,7 +37,8 @@ else
   git clone --depth 1 https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 fi
 
+source ~/.shellrc
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source ~/.shellrc
 [ -z $PROFILE_IS_SOURCED ] && source $HOME/.profile
