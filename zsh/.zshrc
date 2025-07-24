@@ -6,7 +6,12 @@ export ZSH_CUSTOM=$HOME/.zsh_custom
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bira"
+
+if [ ! -e ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/geometry ]; then
+  git clone https://github.com/geometry-zsh/geometry ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/geometry
+fi
+
+source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/geometry/geometry.zsh
 
 if [ ! -e ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-pipx ]; then
   git clone https://github.com/thuandt/zsh-pipx ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-pipx
