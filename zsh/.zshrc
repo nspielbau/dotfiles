@@ -39,7 +39,7 @@ fi
 
 source ~/.shellrc
 
-[ -f ~/.fzf.zsh ] && ~/.fzf/install
+[! -f ~/.fzf.zsh ] && ~/.fzf/install
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 [ -z $PROFILE_IS_SOURCED ] && source $HOME/.profile
