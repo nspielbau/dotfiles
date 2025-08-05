@@ -13,6 +13,18 @@ fi
 
 source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/geometry/geometry.zsh
 
+geomerty_rob_folders() {
+  [[ -n "${ROB_FOLDERS_ACTIVE_ENV}" ]] || return 1
+
+  : ${GEOMETRY_ROB_FOLDERS_COLOR:=cyan}
+
+  ROB_FOLDER=${ROB_FOLDERS_ACTIVE_ENV:+$(ansi ${GEOMETRY_ROB_FOLDERS_COLOR} ${ROB_FOLDERS_ACTIVE_ENV:t})}
+  echo -n ${$(print "$ROB_FOLDER")}
+}
+
+GEOMETRY_PROMPT+=(geometry_virtualenv geometry_newline)
+GEOMETRY_RPROMPT+=(geomerty_rob_folders)
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
