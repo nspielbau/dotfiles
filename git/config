@@ -1,7 +1,7 @@
 [user]
 	name = Niklas Spielbauer
 	email = spielbauer@fzi.de
-	signingkey = /home/spielbau/.ssh/id_IDS_Ioniq
+	signingkey = ~/.ssh/id_IDS_Ioniq
 [pull]
 	rebase = true
 [merge]
