@@ -9,6 +9,18 @@
 # | |_  | | | |  \| | |     | |  | | | | |  \| \___ \
 # |  _| | |_| | |\  | |___  | |  | | |_| | |\  |___) |
 # |_|    \___/|_| \_|\____| |_| |___\___/|_| \_|____/
+find_git_repos() {
+  ignore_pattern="\(3\|\(t\|T\)hi\)rd_\?\(p\|P\)arty"
+  if [ "$#" -gt 0 ]; then
+    if [ $1 = "-a" ]; then
+      ignore_pattern="*"
+    fi
+  fi
+  local repos=$(find . -name ".git" -type d | sed 's/\/.git//' | grep -v "$ignore_pattern" | sort)
+  for repo in $repos; do
+    echo $repo | sed 's/^\.\///'
+  done
+}
 
 forgit() {
   find_git_repos | xargs -I{} sh -c "echo ========= {} =========; git -C {} $*;"
