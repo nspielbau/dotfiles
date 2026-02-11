@@ -30,14 +30,13 @@ return {
       automatic_enable=true,
       ensure_installed = {
         "clangd",
-        "basedpyright",
+        "ty",
       },
     })
 
     mason_tool_installer.setup({
       ensure_installed = {
-        "black", -- python formatter
-        "pylint",
+        "ruff",
         "vale",
       },
     })
