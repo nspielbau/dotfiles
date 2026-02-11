@@ -37,13 +37,6 @@ return {
       table.insert(yaml_linters, yamllint_pkg_name)
     end
 
-    -- Python linters
-    local python_linters = {}
-    local python_linter_pkg_name = "pylint"
-    if (mason_registry.ensure_installed(python_linter_pkg_name)) then
-      table.insert(python_linters, python_linter_pkg_name)
-    end
-
     -- Shell linters
     local shell_linters = {}
     local shell_linter_pkg_name = "shellcheck"
@@ -66,8 +59,5 @@ return {
       end,
     })
 
-    -- Set pylint to work in virtualenv
-    lint.linters.pylint.cmd = 'python3'
-    lint.linters.pylint.args = {'-m', 'pylint', '-f', 'json'}
   end
 }
