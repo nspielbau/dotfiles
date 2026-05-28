@@ -2,6 +2,7 @@ if [ ! -d "/opt/ros/humble" ] &&
   [ ! -d "/opt/ros/iron" ] &&
   [ ! -d "/opt/ros/jazzy" ] &&
   [ ! -d "/opt/ros/kilted" ] &&
+  [ ! -d "/opt/ros/lyrical" ] &&
   [ ! -d "/opt/ros/rolling" ] \
   ; then
   return 0
