@@ -9,6 +9,7 @@
       "*.env.example": "allow"
     }
   },
+  "lsp": true,
   "provider": {
     "fzi-llm": {
       "models": {
