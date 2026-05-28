@@ -1,0 +1,41 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "theme": "github",
+  "permission": {
+    "*": "ask",
+    "read": {
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow"
+    }
+  },
+  "provider": {
+    "fzi-llm": {
+      "models": {
+        "Qwen/Qwen3.5-397B-A17B": {
+          "family": "",
+          "modalities": {
+            "input": [
+              "text",
+              "video",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "name": "Qwen/Qwen3.5-397B-A17B"
+        },
+        "coder": {
+          "name": "FZI-Coder"
+        }
+      },
+      "name": "FZI-LLM",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "https://llm.fzi.de/api"
+      }
+    }
+  }
+}
+
