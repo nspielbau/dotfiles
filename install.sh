@@ -18,6 +18,7 @@ ln -sf ${PWD}/lazygit/config.yml ${HOME}/.config/lazygit/config.yml
 
 mkdir -p $HOME/.config/opencode
 ln -sf ${PWD}/opencode/opencode.json ${HOME}/.config/opencode/opencode.json
+ln -sf ${PWD}/opencode/prompts ${HOME}/.config/opencode/prompts
 
 mkdir -p $HOME/.config/robot_folders
 ln -sf ${PWD}/robot_folders/robot_folders.yaml ${HOME}/.config/robot_folders.yaml
