@@ -357,15 +357,6 @@
     }
   },
   "mcp": {
-    "codegraph": {
-      "type": "local",
-      "command": [
-        "codegraph",
-        "serve",
-        "--mcp"
-      ],
-      "enabled": true
-    },
     "memory": {
       "type": "local",
       "command": [
