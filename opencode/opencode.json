@@ -4,7 +4,7 @@
   "subagent_depth": 2,
   "agent": {
     "explore": {
-      "model": "kit-llm/kit.mistral-small-4-119b-a8b",
+      "model": "fzi-llm/Qwen/Qwen3.5-397B-A17B",
     },
     "plan": {
       "model": "openai/gpt-5.6-sol",
@@ -19,13 +19,13 @@
       "model": "fzi-llm/Qwen/Qwen3.5-397B-A17B",
     },
     "scout": {
-      "model": "kit-llm/kit.mistral-small-4-119b-a8b",
+      "model": "fzi-llm/Qwen/Qwen3.5-397B-A17B",
       "mode": "subagent"
     },
     "ai-documenter": {
       "description": "Use this agent when creating or improving API documentation, writing OpenAPI specifications, building interactive documentation portals, or generating code examples for APIs.",
       "mode": "subagent",
-      "model": "kit-llm/kit.mistral-small-4-119b-a8",
+      "model": "fzi-llm/Qwen/Qwen3.5-397B-A17B",
       "temperature": 0.5,
       "prompt": "{file:./prompts/api-documenter.md}"
     },
@@ -48,28 +48,28 @@
     "build-engineer": {
       "description": "Use this agent when you need to optimize build performance, reduce compilation times, or scale build systems across growing teams.",
       "mode": "subagent",
-      "model": "kit-llm/kit.mistral-small-4-119b-a8b",
+      "model": "fzi-llm/Qwen/Qwen3.5-397B-A17B",
       "temperature": 0.5,
       "prompt": "{file:./prompts/build-engineer.md}"
     },
     "test-automator": {
       "description": "Use this agent when you need to build, implement, or enhance automated test frameworks, create test scripts, or integrate testing into CI/CD pipelines.",
       "mode": "subagent",
-      "model": "kit-llm/kit.minimax-m2.7-229b",
+      "model": "fzi-llm/Qwen/Qwen3.5-397B-A17B",
       "temperature": 0.5,
       "prompt": "{file:./prompts/test-automator.md}"
     },
     "frontend-developer": {
       "description": "Use when building complete frontend applications across React, Vue, and Angular frameworks requiring multi-framework expertise and full-stack integration.",
       "mode": "subagent",
-      "model": "kit-llm/kit.minimax-m2.7-229b",
+      "model": "fzi-llm/Qwen/Qwen3.5-397B-A17B",
       "temperature": 0.8,
       "prompt": "{file:./prompts/frontend-developer.md}"
     },
     "python-pro": {
       "description": "Use this agent when you need to build type-safe, production-ready Python code for web APIs, system utilities, or complex applications requiring modern async patterns and extensive type coverage.",
       "mode": "subagent",
-      "model": "kit-llm/kit.minimax-m2.7-229b",
+      "model": "fzi-llm/Qwen/Qwen3.5-397B-A17B",
       "variant": "high",
       "temperature": 0.5,
       "prompt": "{file:./prompts/python-pro.md}"
@@ -77,7 +77,7 @@
     "qa-expert": {
       "description": "Use this agent when you need comprehensive quality assurance strategy, test planning across the entire development cycle, or quality metrics analysis to improve overall software quality.",
       "mode": "subagent",
-      "model": "kit-llm/kit.minimax-m2.7-229b",
+      "model": "fzi-llm/Qwen/Qwen3.5-397B-A17B",
       "temperature": 0.5,
       "prompt": "{file:./prompts/qa-expert.md}"
     },
@@ -92,7 +92,7 @@
     "git-workflow-manager": {
       "description": "Use this agent when you need to design, establish, or optimize Git workflows, branching strategies, and merge management for a project or team.",
       "mode": "subagent",
-      "model": "kit-llm/kit.mistral-small-4-119b-a8b",
+      "model": "fzi-llm/Qwen/Qwen3.5-397B-A17B",
       "temperature": 0.1,
       "prompt": "{file:./prompts/git-workflow-manager.md}"
     },
@@ -120,14 +120,14 @@
     "rust-engineer": {
       "description": "Use when building Rust systems where memory safety, ownership patterns, zero-cost abstractions, and performance optimization are critical for systems programming, embedded development, async applications, or high-performance services.",
       "mode": "subagent",
-      "model": "kit-llm/kit.minimax-m2.7-229b",
+      "model": "fzi-llm/Qwen/Qwen3.5-397B-A17B",
       "temperature": 0.1,
       "prompt": "{file:./prompts/rust-engineer.md}"
     },
     "tooling-engineer": {
       "description": "Use this agent when you need to build or enhance developer tools including CLIs, code generators, build tools, and IDE extensions.",
       "mode": "subagent",
-      "model": "kit-llm/kit.minimax-m2.7-229b",
+      "model": "fzi-llm/Qwen/Qwen3.5-397B-A17B",
       "temperature": 0.3,
       "prompt": "{file:./prompts/tooling-engineer.md}"
     },
@@ -320,30 +320,6 @@
         "baseURL": "https://llm.fzi.de/api"
       }
     },
-    "kit-llm": {
-      "name": "KIT",
-      "npm": "@ai-sdk/openai-compatible",
-      "options": {
-        "baseURL": "https://ki-toolbox.scc.kit.edu/api"
-      },
-      "models": {
-        "kit.gpt-oss-120b": {
-          "name": "GPT-OSS 120B"
-        },
-        "kit.mistral-small-4-119b-a8b": {
-          "name": "Mistral Small 4 119B"
-        },
-        "kit.gemma-4-31b-it": {
-          "name": "Gemma 4 31B IT"
-        },
-        "kit.qwen3.5-397b-A17b": {
-          "name": "Qwen3.5 397B A17B"
-        },
-        "kit.minimax-m2.7-229b": {
-          "name": "MiniMax M2.7 229B"
-        }
-      }
-    },
     // Detected openai authentication; opencode-quota added this global provider declaration.
     "openai": {
       "models": {
@@ -388,23 +364,6 @@
         "serve",
         "--mcp"
       ],
-      "enabled": true
-    },
-    "github": {
-      "type": "remote",
-      "url": "https://api.githubcopilot.com/mcp/",
-      "enabled": true,
-      "oauth": false,
-      "headers": {
-        "Authorization": "Bearer"
-      }
-    },
-    "context7": {
-      "type": "remote",
-      "url": "https://mcp.context7.com/mcp",
-      "headers": {
-        "CONTEXT7_API_KEY": ""
-      },
       "enabled": true
     },
     "memory": {
